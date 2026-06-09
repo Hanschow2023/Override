@@ -1,0 +1,28 @@
+# 这里的配置会合并并覆盖到你的任何订阅中
+dns:
+  fake-ip-filter:
+    - "*.douyin.com"
+    - "*.snssdk.com"
+    - "*.amemv.com"
+
+rules:
+  # 放在最上方，优先直连抖音
+  - DOMAIN-KEYWORD,douyin,DIRECT
+  - DOMAIN-KEYWORD,snssdk,DIRECT
+  - DOMAIN-SUFFIX,amemv.com,DIRECT
+
+  # Apple AI 强制代理
+  # Apple Intelligence & 新版 Siri 核心域名
+  - DOMAIN-KEYWORD,apple-subsea,PROXY
+  - DOMAIN-SUFFIX,apple-cloudkit.com,PROXY
+  - DOMAIN-SUFFIX,blobstore.apple.com,PROXY
+  - DOMAIN-KEYWORD,privatecloudcompute,PROXY
+  - DOMAIN-SUFFIX,bag.itunes.apple.com,PROXY
+
+  # Siri 与语音识别增强服务
+  - DOMAIN-SUFFIX,guzzoni.apple.com,PROXY
+  - DOMAIN-KEYWORD,siri,PROXY
+
+  # 附加的 Gateway 与配置下发验证
+  - DOMAIN,gateway.icloud.com,PROXY
+  - DOMAIN,configuration.apple.com,PROXY
