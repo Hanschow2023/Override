@@ -1,28 +1,37 @@
 # 这里的配置会合并并覆盖到你的任何订阅中
 dns:
   fake-ip-filter:
-    - "*.douyin.com"
-    - "*.snssdk.com"
-    - "*.amemv.com"
+    - "+.douyin.com"
+    - "+.snssdk.com"
+    - "+.amemv.com"
 
 rules:
   # 放在最上方，优先直连抖音
+  - DOMAIN-SUFFIX,douyin.com,DIRECT
+  - DOMAIN-SUFFIX,snssdk.com,DIRECT
+  - DOMAIN-SUFFIX,amemv.com,DIRECT
   - DOMAIN-KEYWORD,douyin,DIRECT
   - DOMAIN-KEYWORD,snssdk,DIRECT
-  - DOMAIN-SUFFIX,amemv.com,DIRECT
 
   # Apple AI 强制代理
-  # Apple Intelligence & 新版 Siri 核心域名
-  - DOMAIN-KEYWORD,apple-subsea,PROXY
-  - DOMAIN-SUFFIX,apple-cloudkit.com,PROXY
-  - DOMAIN-SUFFIX,blobstore.apple.com,PROXY
-  - DOMAIN-KEYWORD,privatecloudcompute,PROXY
-  - DOMAIN-SUFFIX,bag.itunes.apple.com,PROXY
+  # Apple 官方列出的 Apple Intelligence / PCC / Siri 关键主机
+  - DOMAIN,apple-relay.cloudflare.com,ChatGPT
+  - DOMAIN,apple-relay.fastly-edge.com,ChatGPT
+  - DOMAIN,apple-relay.apple.com,ChatGPT
+  - DOMAIN,cp4.cloudflare.com,ChatGPT
+  - DOMAIN-SUFFIX,smoot.apple.com,ChatGPT
+
+  # Apple Intelligence & 新版 Siri 补充域名
+  - DOMAIN-KEYWORD,apple-subsea,ChatGPT
+  - DOMAIN-SUFFIX,apple-cloudkit.com,ChatGPT
+  - DOMAIN-SUFFIX,blobstore.apple.com,ChatGPT
+  - DOMAIN-KEYWORD,privatecloudcompute,ChatGPT
+  - DOMAIN-SUFFIX,bag.itunes.apple.com,ChatGPT
 
   # Siri 与语音识别增强服务
-  - DOMAIN-SUFFIX,guzzoni.apple.com,PROXY
-  - DOMAIN-KEYWORD,siri,PROXY
+  - DOMAIN,guzzoni.apple.com,ChatGPT
+  - DOMAIN-KEYWORD,siri,ChatGPT
 
   # 附加的 Gateway 与配置下发验证
-  - DOMAIN,gateway.icloud.com,PROXY
-  - DOMAIN,configuration.apple.com,PROXY
+  - DOMAIN,gateway.icloud.com,ChatGPT
+  - DOMAIN,configuration.apple.com,ChatGPT
