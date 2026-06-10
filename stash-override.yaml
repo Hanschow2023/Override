@@ -1,3 +1,6 @@
+name: DA
+desc: 抖音和苹果AI策略
+
 # 这里的配置会合并并覆盖到你的任何订阅中
 dns:
   fake-ip-filter:
