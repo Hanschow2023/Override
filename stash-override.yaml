@@ -4,9 +4,9 @@ desc: 抖音和苹果AI策略
 # 这里的配置会合并并覆盖到你的任何订阅中
 dns:
   fake-ip-filter:
-    - "+.douyin.com"
-    - "+.snssdk.com"
-    - "+.amemv.com"
+    - "*.douyin.com"
+    - "*.snssdk.com"
+    - "*.amemv.com"
 
 rules:
   # 放在最上方，优先直连抖音
