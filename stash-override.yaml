@@ -41,3 +41,7 @@ rules:
 
   # Firstrade 全站代理
   - DOMAIN-SUFFIX,firstrade.com,Telegram
+
+  # 富途全站代理
+  - DOMAIN-SUFFIX,futunn.com,Telegram
+  - DOMAIN-SUFFIX,futuhk.com,Telegram
