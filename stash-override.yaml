@@ -1,5 +1,5 @@
-name: DA
-desc: 抖音和苹果AI策略
+name: 深海崛金
+desc: 自用代理覆写策略，支持stash和clash类。主要功能是抖音评论区直连、港版iPhone苹果AI走ChatGPT策略组、券商Firstrade/FUTU走Telegram策略组。
 
 # 这里的配置会合并并覆盖到你的任何订阅中
 dns:
