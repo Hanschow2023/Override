@@ -38,3 +38,6 @@ rules:
   # 附加的 Gateway 与配置下发验证
   - DOMAIN,gateway.icloud.com,ChatGPT
   - DOMAIN,configuration.apple.com,ChatGPT
+
+  # Firstrade 全站代理
+  - DOMAIN-SUFFIX,firstrade.com,Telegram
