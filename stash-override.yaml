@@ -5,14 +5,32 @@ desc: 自用代理覆写策略，支持stash和clash类。主要功能是抖音�
 dns:
   fake-ip-filter:
     - "*.douyin.com"
+    - "*.iesdouyin.com"
     - "*.snssdk.com"
     - "*.amemv.com"
+    - "*.douyinstatic.com"
+    - "*.byteimg.com"
+    - "*.bytetos.com"
+    - "*.zijieapi.com"
+    - "*.pstatp.com"
+    - "*.huoshanstatic.com"
+    - "*.douyinpic.com"
+    - "*.byted-static.com"
 
 rules:
   # 放在最上方，优先直连抖音
   - DOMAIN-SUFFIX,douyin.com,DIRECT
+  - DOMAIN-SUFFIX,iesdouyin.com,DIRECT
   - DOMAIN-SUFFIX,snssdk.com,DIRECT
   - DOMAIN-SUFFIX,amemv.com,DIRECT
+  - DOMAIN-SUFFIX,douyinstatic.com,DIRECT
+  - DOMAIN-SUFFIX,byteimg.com,DIRECT
+  - DOMAIN-SUFFIX,bytetos.com,DIRECT
+  - DOMAIN-SUFFIX,zijieapi.com,DIRECT
+  - DOMAIN-SUFFIX,pstatp.com,DIRECT
+  - DOMAIN-SUFFIX,huoshanstatic.com,DIRECT
+  - DOMAIN-SUFFIX,douyinpic.com,DIRECT
+  - DOMAIN-SUFFIX,byted-static.com,DIRECT
   - DOMAIN-KEYWORD,douyin,DIRECT
   - DOMAIN-KEYWORD,snssdk,DIRECT
 
